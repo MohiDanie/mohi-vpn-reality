@@ -1,36 +1,27 @@
 {
-  "log": {
-    "loglevel": "warning"
-  },
-  "inbounds": [
-    {
-      "port": 2333,
-      "protocol": "vless",
-      "settings": {
-        "clients": [
-          {
-            "id": "3b7e1e87-6d2a-4e09-a1d1-bc9f26dfb1c2",
-            "flow": "xtls-rprx-vision"
-          }
-        ],
-        "decryption": "none"
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "show": false,
-          "serverName": "www.cloudflare.com",
-          "fingerprint": "chrome",
-          "privateKey": "kJhTDCUq3YF9AxL6omQCFvTOSasPL4MoH9n2pYbm4Uc=",
-          "shortId": "a7b3c928"
-        }
+  "log": { "loglevel": "warning" },
+  "inbounds": [{
+    "port": 2333,
+    "protocol": "vless",
+    "settings": {
+      "clients": [{
+        "id": "3b7e1e87-6d2a-4e09-a1d1-bc9f26dfb1c2",
+        "flow": "xtls-rprx-vision",
+        "email": "user@mohi.dev"
+      }],
+      "decryption": "none"
+    },
+    "streamSettings": {
+      "network": "tcp",
+      "security": "reality",
+      "realitySettings": {
+        "show": false,
+        "serverName": "www.cloudflare.com",
+        "fingerprint": "chrome",
+        "privateKey": "kJhTDCUq3YF9AxL6omQCFvTOSasPL4MoH9n2pYbm4Uc=",
+        "shortId": "a7b3c928"
       }
     }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom"
-    }
-  ]
+  }],
+  "outbounds": [{ "protocol": "freedom" }]
 }
