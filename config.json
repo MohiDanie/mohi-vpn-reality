@@ -1,34 +1,36 @@
 {
-  "inbounds": [{
-    "port": 2333,
-    "protocol": "vless",
-    "settings": {
-      "clients": [
-        {
-          "id": "3b7e1e87-6d2a-4e09-a1d1-bc9f26dfb1c2",
-          "flow": "xtls-rprx-vision",
-          "level": 0,
-          "email": "mohi@vpn.com"
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "port": 2333,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "3b7e1e87-6d2a-4e09-a1d1-bc9f26dfb1c2",
+            "flow": "xtls-rprx-vision"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "serverName": "www.cloudflare.com",
+          "fingerprint": "chrome",
+          "privateKey": "kJhTDCUq3YF9AxL6omQCFvTOSasPL4MoH9n2pYbm4Uc=",
+          "shortId": "a7b3c928"
         }
-      ],
-      "decryption": "none",
-      "fallbacks": []
-    },
-    "streamSettings": {
-      "network": "tcp",
-      "security": "reality",
-      "realitySettings": {
-        "show": false,
-        "dest": "www.cloudflare.com:443",
-        "xver": 0,
-        "serverNames": ["www.cloudflare.com"],
-        "privateKey": "Kx1xZXvCw6T9JfGnyOCZyI6Je0zFtc5EXAMPLE=",
-        "shortIds": ["a7b3c928"]
       }
     }
-  }],
-  "outbounds": [{
-    "protocol": "freedom",
-    "settings": {}
-  }]
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom"
+    }
+  ]
 }
